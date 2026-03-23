@@ -9,21 +9,49 @@
 # інформація скільки гривень в 1 гривні
 
 
-exchange_rates = {
-    "USD": 41.25,   # 1 долар США = 41.25 гривні
-    "EUR": 44.80,   # 1 євро = 44.80 гривні
-    "PLN": 10.15,   # 1 польський злотий = 10.15 гривні
-    "GBP": 51.50,   # 1 британський фунт = 51.50 гривні
-    "CHF": 46.90,   # 1 швейцарський франк = 46.90 гривні
-    "CZK": 1.75,    # 1 чеська крона = 1.75 гривні
-}
+# exchange_rates = {
+#     "USD": 41.25,   # 1 долар США = 41.25 гривні
+#     "EUR": 44.80,   # 1 євро = 44.80 гривні
+#     "PLN": 10.15,   # 1 польський злотий = 10.15 гривні
+#     "GBP": 51.50,   # 1 британський фунт = 51.50 гривні
+#     "CHF": 46.90,   # 1 швейцарський франк = 46.90 гривні
+#     "CZK": 1.75,    # 1 чеська крона = 1.75 гривні
+# }
+#
+# from_currency = input("Введіть назву валюти, яку потрібно конвертувати: ")
+# amount = float(input("Введіть суму: "))
+# to_currency = input("Введіть назву валюти, в яку потрібно конвертувати: ")
+#
+#
+# amount_in_uah = amount * exchange_rates[from_currency]
+# result = amount_in_uah / exchange_rates[to_currency]
+#
+# print(f"{amount} {from_currency} = {result:.2f} {to_currency}")
+#
+#
+# Напишіть функцію, яка отримує 2 множини з іменами
+# працівниківb, які працюють в офісі та віддалено. Виведіть на
+# екран:
+#  Імена усіх працівників
+#  Імена працівників, які працюють і в офісі, і віддалено
+#  Відсоток працівників, які працюють і в офісі, і
+# віддалено
 
-from_currency = input("Введіть назву валюти, яку потрібно конвертувати: ")
-amount = float(input("Введіть суму: "))
-to_currency = input("Введіть назву валюти, в яку потрібно конвертувати: ")
+def analyze_workers(office_workers, remote_workers):
+    all_workers = office_workers | remote_workers
+
+    both_workers = office_workers & remote_workers
+
+    if len(all_workers) > 0:
+        percent = (len(both_workers) / len(all_workers)) * 100
+    else:
+        percent = 0
+
+    return percent, all_workers , both_workers
 
 
-amount_in_uah = amount * exchange_rates[from_currency]
-result = amount_in_uah / exchange_rates[to_currency]
+office = {"Іван", "Марія", "Олег","Віктор"}
+remote = {"Олег", "Анна", "Іван"}
 
-print(f"{amount} {from_currency} = {result:.2f} {to_currency}")
+print(analyze_workers(office, remote))
+
