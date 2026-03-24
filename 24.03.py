@@ -4,5 +4,8 @@ print(1)
 print(2)
 
 
-def f(name):
-    print(name)
+# перевірка
+
+
+print(3)
+print(4)
