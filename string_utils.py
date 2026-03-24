@@ -1,5 +1,5 @@
 # Видалення знаків пунктуації з рядка: ,.?!;:
-def remove_punctuation(string : str):
+def remove_punctuation(string: str):
     punctuation = ",.?!;:"
 
     for char in punctuation:
@@ -8,7 +8,7 @@ def remove_punctuation(string : str):
     return string
 
 
-def count_vowels(string : str):
+def count_vowels(string: str):
     count = 0
     litter = "aeiou"
 
@@ -24,10 +24,10 @@ def is_palindrome(text):
 
     return cleaned == cleaned[::-1]
 
+
 if __name__ == "__main__":
     text = "Hello ,,,:World"
 
     print(count_vowels(text))
     print(is_palindrome(text))
     print(remove_punctuation(text))
-

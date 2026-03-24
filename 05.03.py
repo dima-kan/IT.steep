@@ -71,7 +71,7 @@
 # частотою(відсотком від загальної кількості).
 
 
-def word_statistics(text, percent = True )-> dict:
+def word_statistics(text, percent=True) -> dict:
     words = text.split()
     stats = {}
 
@@ -89,4 +89,4 @@ def word_statistics(text, percent = True )-> dict:
     return stats
 
 
-print(word_statistics('cat dog cat'))
+print(word_statistics("cat dog cat"))

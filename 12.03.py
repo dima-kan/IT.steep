@@ -71,9 +71,9 @@
 
 categories = {
     "fruits": {"apple", "banana", "orange"},
-    "food": {"bread", "milk", "banana","water"},
+    "food": {"bread", "milk", "banana", "water"},
     "drinks": {"water", "juice", "milk"},
-    "sweet": {"chocolate", "banana"}
+    "sweet": {"chocolate", "banana"},
 }
 
 try:
@@ -87,8 +87,6 @@ except KeyError:
     print("Помилка: такої категорії немає")
 
 
-
-
 # Організуйте базу даних «Співробітники». Усі дані мають
 # зберігатись у словнику де ключ – ім’я людини, значення –
 # зарплата. Реалізуйте такий функціонал(через функції):
@@ -99,11 +97,7 @@ except KeyError:
 #  Змінити зарплату співробітнику
 
 
-employees = {
-    "Dmytro": 20000,
-     "John": 15000
-}
-
+employees = {"Dmytro": 20000, "John": 15000}
 
 
 def show_all():
@@ -111,13 +105,14 @@ def show_all():
         print(f"{key}: {value}")
 
 
-def add_employee(name , salary):
+def add_employee(name, salary):
     if name in employees:
         raise ValueError("Працівник вже існує")
 
     employees[name] = salary
 
     return employees
+
 
 def del_employee(name):
     if name not in employees:
@@ -134,7 +129,7 @@ def show_salary(name):
     print(f"{name}: {employees[name]}")
 
 
-def change_salary(name , salary):
+def change_salary(name, salary):
     if name not in employees:
         raise ValueError("Працівника не знайдено")
     employees[name] = salary
@@ -149,4 +144,4 @@ try:
     change_salary("Petro", 15000)
     del_employee("John")
 except ValueError as e:
-    print("Помилка",e)
+    print("Помилка", e)

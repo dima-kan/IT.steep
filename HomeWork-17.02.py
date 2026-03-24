@@ -29,13 +29,12 @@
 #  dares – список завдань
 
 
-
-
 # get_player_names(): Запитайте імена гравців і поверніть
 # # їх у вигляді списку.
 
 
 questions = []
+
 
 def get_player_names():
     players = []
@@ -47,7 +46,7 @@ def get_player_names():
     while True:
         add_player = input("Хочете додати ще одного гравця? (так/ні): ")
 
-        if add_player.lower() == 'так':
+        if add_player.lower() == "так":
             name = input(f"Гравець {len(players) + 1}: ")
             players.append(name)
         else:
@@ -55,9 +54,11 @@ def get_player_names():
 
     return players
 
+
 # print(get_player_names())
 # ask_truth_or_dare(player): Функція, яка приймає ім'я
 # гравця та запитує його, чи обирати "Правда" чи "Дія".
+
 
 def ask_truth_or_dare(players):
     results = []
@@ -76,10 +77,11 @@ def ask_truth_or_dare(players):
                 print("Будь ласка, введіть 'Правда' або 'Дія'")
 
     return results
+
+
 result = ask_truth_or_dare()
 print(result)
 
 # Функція, яка приймає ім'я гравця
 # # та вибирає одне завдання випадковим чином та
 # # просить гравця виконаи його.
-

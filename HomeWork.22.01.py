@@ -39,4 +39,3 @@
 #         break
 #     elif word[0] == word[-1]:
 #         print(word)
-

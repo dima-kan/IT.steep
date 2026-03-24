@@ -21,7 +21,6 @@
 #     print(f"Температура води: {result:.2f}°C")
 
 
-
 # Завдання 2
 # Напишіть функцію з параметром show_time, яка запитує в
 # користувача ім’я та повертає його.
@@ -54,7 +53,6 @@
 
 
 from date_utils import days_until_deadline
-
 
 user_input = input("Введіть дату дедлайну (YYYY-MM-DD): ")
 

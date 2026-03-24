@@ -1,4 +1,4 @@
-from typing import Literal, Optional
+from typing import Literal
 
 # Тип для символів на сітці
 CROSS = "X"
@@ -28,7 +28,6 @@ def create_grid(size: int = 3) -> list[list[Cell]]:
     return grid
 
 
-
 def print_grid(grid: list[list[Cell]]) -> None:
     """
     Виводить поточний стан сітки на екран у зручному для читання вигляді.
@@ -48,12 +47,8 @@ def print_grid(grid: list[list[Cell]]) -> None:
         print("---+---+---")
 
 
-
 def add_symbol_to_grid(
-    grid: list[list[Cell]],
-    row: int,
-    col: int,
-    symbol: Symbol
+    grid: list[list[Cell]], row: int, col: int, symbol: Symbol
 ) -> bool:
     """
     Додає новий символ на сітку за вказаними координатами.
@@ -126,7 +121,7 @@ def ask_user_move(player_name: str, grid: list[list[Cell]]) -> tuple[int, int]:
         return (row, col)
 
 
-def check_winner(grid: list[list[Cell]]) -> Optional[Symbol]:
+def check_winner(grid: list[list[Cell]]) -> Symbol | None:
     """
     Перевіряє, чи є переможець на поточній сітці.
 
@@ -177,6 +172,7 @@ def check_winner(grid: list[list[Cell]]) -> Optional[Symbol]:
             return symbol
 
     return None
+
 
 def has_empty_cells(grid: list[list[Cell]]) -> bool:
     """
@@ -237,4 +233,6 @@ def main() -> None:
     """
     # TODO: реалізувати основний ігровий цикл за описаним алгоритмом.
     pass
+
+
 print_grid(create_grid(3))

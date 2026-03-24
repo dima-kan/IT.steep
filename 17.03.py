@@ -15,7 +15,6 @@
 # файлу також вводить користувач(без розширення .txt)
 
 
-
 # age = int(input("Введіть вік "))
 # name = input("Введіть ім’я ")
 # filename = input("Введіть назву файлу: ")
@@ -27,8 +26,6 @@
 #     file.write(str(age))
 
 
-
-
 # Є текстовий файл. Запишіть його рядки в інший файл
 
 # with open("text.txt", encoding="UTF-8") as file:
@@ -36,8 +33,6 @@
 #
 # with open("text1.txt", "w", encoding="UTF-8") as file:
 #     file.writelines(text)
-
-
 
 
 # вдання 4
@@ -80,8 +75,6 @@
 #     file.write(new_text)
 
 
-
-
 # Завдання 6
 # Напишіть функцію, яка отримує назву файлу та список
 # Практичне завдання
@@ -89,8 +82,3 @@
 # розмістивши кожне число на окремому рядку.
 # Напишіть іншу функцію, яка отримує назву файл та читає
 # з нього ці числа і повертає як список.
-
-
-
-git config --global user.name "dima_kan"
-git config --global user.email "kandaurovdm@gmail.com"

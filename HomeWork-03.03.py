@@ -30,4 +30,3 @@
 #     fraud_names = used_coupons - received_coupons
 #
 #     return unused_count,unused_names,fraud_names
-

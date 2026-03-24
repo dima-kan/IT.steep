@@ -37,6 +37,7 @@
 #  Відсоток працівників, які працюють і в офісі, і
 # віддалено
 
+
 def analyze_workers(office_workers, remote_workers):
     all_workers = office_workers | remote_workers
 
@@ -47,11 +48,10 @@ def analyze_workers(office_workers, remote_workers):
     else:
         percent = 0
 
-    return percent, all_workers , both_workers
+    return percent, all_workers, both_workers
 
 
-office = {"Іван", "Марія", "Олег","Віктор"}
+office = {"Іван", "Марія", "Олег", "Віктор"}
 remote = {"Олег", "Анна", "Іван"}
 
 print(analyze_workers(office, remote))
-

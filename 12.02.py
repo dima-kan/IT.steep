@@ -29,7 +29,6 @@
 # print(show_text(text="Hello World"))
 
 
-
 # Напишіть функцію, яка отримує температуру та
 # переводить її в градуси Цельсія або в Фаренгейта. Для
 # цього є додатковий параметр unit_mapping:
@@ -109,7 +108,6 @@
 # print(process_numbers(1, 2, 3, 4))
 
 
-
 #  Завдання 6 (ускладнене) — Операції над числом
 # Умова:
 # Напишіть функцію, яка отримує такі параметри:
@@ -147,7 +145,6 @@
 # print(apply_operation(7, operation="invert"))
 
 
-
 # 🔹 Завдання 7 (ускладнене) — Обробка тексту з режимами
 # Умова:
 # Напишіть функцію, яка отримує:
@@ -169,14 +166,15 @@
 # mode == "lower".
 # reverse_words == False.
 
-def process_text(text:str ,mode="lower" ,reverse_words = False):
-    if mode=="upper":
-        text=text.upper()
-    elif mode=="lower":
-        text=text.lower()
 
-    elif mode=="capitalize":
-        text=text.capitalize()
+def process_text(text: str, mode="lower", reverse_words=False):
+    if mode == "upper":
+        text = text.upper()
+    elif mode == "lower":
+        text = text.lower()
+
+    elif mode == "capitalize":
+        text = text.capitalize()
 
     else:
         pass

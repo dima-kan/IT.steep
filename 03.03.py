@@ -57,7 +57,6 @@
 # #  Товари, які потрібні лише другій людині
 
 
-
 # def compare_shopping_lists(list1, list2):
 #     set1 = set(list1)
 #     set2 = set(list2)
@@ -86,17 +85,14 @@
 #  Імена тих хто пройшов усі 3 етапи
 
 
-def process_conference_participants(register
-                                    ,paid
-                                    ,conf
-                                    ):
+def process_conference_participants(register, paid, conf):
     register = set(register)
     paid = set(paid)
     conf = set(conf)
 
     print(register - paid)
 
-    print(conf -register)
+    print(conf - register)
 
     print(paid - conf)
 
@@ -105,20 +101,10 @@ def process_conference_participants(register
     print(conf | register | paid)
 
 
-register = [
-    "Anna", "Bohdan", "Iryna", "Maksym", "Olena", "Taras"
-]
+register = ["Anna", "Bohdan", "Iryna", "Maksym", "Olena", "Taras"]
 
-paid = [
-    "Anna", "Iryna", "Taras", "Dmytro"
-]
+paid = ["Anna", "Iryna", "Taras", "Dmytro"]
 
-conf = [
-    "Anna", "Maksym", "Dmytro", "Sofia"
-]
+conf = ["Anna", "Maksym", "Dmytro", "Sofia"]
 
-process_conference_participants(register,paid,conf)
-
-
-
-
+process_conference_participants(register, paid, conf)

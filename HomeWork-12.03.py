@@ -49,5 +49,3 @@
 #     print(check_login(users))
 # except ValueError as err:
 #     print("Помилка", err)
-
-

@@ -60,6 +60,3 @@
 #
 # def litter_start(words, letter):
 #     return list(filter(lambda word: word.lower().startswith(letter.lower()), words))
-
-
-
