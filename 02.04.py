@@ -140,16 +140,16 @@ class Intern:
 def create_workers():
     worker_type = input("Тип ")
     base_salary = float(input("Базова зарплата: "))
-
+    name = input("Ім'я: ")
     if worker_type == "manager":
-        return Manager(base_salary)
+        return Manager(name, base_salary)
 
     elif worker_type == "developer":
         exp = int(input("Стаж: "))
-        return Developer(base_salary, exp)
+        return Developer(base_salary, exp, name)
 
     elif worker_type == "inter":
-        return Intern(base_salary)
+        return Intern(name, base_salary)
 
     else:
         print("Невідомий тип")
