@@ -115,6 +115,9 @@ class Manager:
     def get_salary(self):
         return self._base_salary
 
+    def display_info(self):
+        print(f"Менеджер {self._name}," f" зарплата: {self.get_salary()}")
+
 
 class Developer:
     def __init__(self, name, base_salary, work_experience):
@@ -127,6 +130,12 @@ class Developer:
             return self._base_salary * 1.2
         return self._base_salary
 
+    def display_info(self):
+        print(
+            f"Розробник {self._name}, стаж: {self._work_experience},"
+            f" зарплата: {self.get_salary()}"
+        )
+
 
 class Intern:
     def __init__(self, name, base_salary):
@@ -135,6 +144,9 @@ class Intern:
 
     def get_salary(self):
         return self._base_salary / 2
+
+    def display_info(self):
+        print(f"Інтерн {self._name}," f" зарплата: {self.get_salary()}")
 
 
 def create_workers():
