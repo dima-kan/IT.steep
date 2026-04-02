@@ -177,3 +177,63 @@ for _ in range(3):
 
 for w in workers:
     w.display_info()
+
+
+# Створіть наступні класи:
+#  Car – атрибути speed
+#  Bicycle – атрибути speed
+#  Boat – атрибути speed
+# Методи:
+#  move() – виводить повідомлення про рух
+# o Car – їде по шосе зі швидкістю
+# o Bicycle – їде по дорозі зі швидкістю
+# o Boat – пливе по воді зі швидкістю
+#  check_speed(speed) – перевіряє чи правильна швидкість,
+# якщо ні то в __init__ треба викикати ValueError з
+# відповідним повідомленням
+# o Car – від 20 до 200
+# o Bicycle – від 10 до 30
+# o Boat – від 0 до 50
+# Напишіть функцію create_vehicle() яка запитує у
+# користувача тип транспорту та потрібні атрибути і повертає
+# об’єкт.
+# Створіть декілька транспортних засобів, добавте їх у список
+# та для кожної викличте відповідні методи
+
+
+class Car:
+    def __init__(self, speed):
+        self._speed = speed
+        self.check_speed()
+
+    def move(self):
+        print(f"Їде по шосе зі швидкістю {self._speed}")
+
+    def check_speed(self):
+        if 20 < self._speed < 200:
+            raise ValueError("не правильна швидкість")
+
+
+class Bicycle:
+    def __init__(self, speed):
+        self._speed = speed
+        self.check_speed()
+
+    def move(self):
+        print(f"Їде по дорозі зі швидкістю {self._speed}")
+
+    def check_speed(self):
+        if 10 < self._speed < 30:
+            raise ValueError("Не правильна швидкість")
+
+    class Boat:
+        def __init__(self, speed):
+            self._speed = speed
+            self.check_speed()
+
+        def move(self):
+            print(f"Пливе по воді зі швидкістю {self._speed}")
+
+        def check_speed(self):
+            if 0 < self._speed < 50:
+                raise ValueError("Не правильна швидкість")
