@@ -143,8 +143,38 @@
 
 
 class Cart:
-    def __init__(
-        self,
-        total,
-    ):
+    def __init__(self, total: int, items: list):
         self._total = total
+        self._items = items
+
+    def __str__(self):
+        return f"Товари:{self._items},Загальна сума {self._total}"
+
+    def __len__(self):
+        return len(self._items)
+
+    def __add__(self, other):
+        if not isinstance(other, Cart):
+            raise TypeError("you can't add a cart with other type")
+        new_items = self._items + other._items
+        new_total = self._total + other._total
+        return Cart(new_total, new_items)
+
+    def __iter__(self):
+        return iter(self._items)
+
+    def __contains__(self, item):
+        return item in self._items
+
+
+cart1 = Cart(800, ["Молоко", "Сир"])
+cart2 = Cart(1000, ["Яблука", "Риба"])
+
+
+print(cart1)
+print(len(cart1))
+cart_all = cart1 + cart2
+print(cart_all)
+for item in cart_all:
+    print(item)
+print("Молоко" in cart_all)
