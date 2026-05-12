@@ -1,0 +1,10 @@
+{
+    "size": "400x444",
+    "color": "blue",
+    "button_color": "bright grey",
+    "placement_buttons": [
+        100,
+        50
+    ],
+    "instructions": "Be a simple kind of man"
+}

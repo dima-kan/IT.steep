@@ -1,0 +1,30 @@
+[
+    {
+        "autor": "Dmytro",
+        "id": 1,
+        "title": "harry potter",
+        "year": 5,
+        "pages": 90
+    },
+    {
+        "autor": "Danya",
+        "id": 3,
+        "title": "harry potter 3",
+        "year": 10,
+        "pages": 300
+    },
+    {
+        "id": 2,
+        "title": "book",
+        "autor": "Mary",
+        "year": 8,
+        "pages": 399
+    },
+    {
+        "id": 5,
+        "title": "book",
+        "autor": "Mary",
+        "year": 8,
+        "pages": 399
+    }
+]
