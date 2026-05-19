@@ -4,6 +4,6 @@ class Settings(BaseSettings):
     port: int = 8080
 
     max_books: int | None = None
-    data_file_path: str = "./books.json"
+    data_file_path: str = "./book.json"
 
 settings = Settings()
